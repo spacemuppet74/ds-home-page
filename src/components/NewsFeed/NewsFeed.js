@@ -69,7 +69,13 @@ class NewsFeed extends Component {
           <NewsTitle article={articles[2]} currentIndex={currentIndex} index={2}
             hover={this.handleMouseOver} />
           <div className="news-feed-article-footer">
-            <span className="news-feed-article-links">Submit article | Subscribe | View all news</span>
+            <span className="news-feed-article-links">
+              <a href="http://cornerstone/news/Lists/Posts/NZBS-NewPost.aspx?Source=http%3A%2F%2Fcornerstone">Submit article </a>
+              |
+               <a href="http://cornerstone/Lists/Subscription/NewForm.aspx?Source=http%3A%2F%2Fcornerstone%2FLists%2FSubscription%2FAllItems%2Easpx">Subscribe </a>
+              |
+               <a href="http://cornerstone/news/Pages/latest.aspx?PageFirstRow=1&FilterField1=appear_in&FilterValue1=Donor%20Services">View all news</a>
+            </span>
           </div>
         </div>
       </div>

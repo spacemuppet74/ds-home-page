@@ -11,9 +11,9 @@ const NewsTitles = ({ article, currentIndex, index, hover }) => {
       timeout={{ enter: 7000, exit: 3000 }}
       appear={true}
     >
-      <div className="news-feed-article-title" onMouseEnter={() => hover(index)}>
+      <a href={article.Path} className="news-feed-article-title" onMouseEnter={() => hover(index)}>
         <h2>{article.Title}</h2>
-      </div>
+      </a>
     </CSSTransition>
   )
 }

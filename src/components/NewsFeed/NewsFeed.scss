@@ -1,5 +1,4 @@
 .news-feed-container {
-  border: 1px solid orange;
   display: flex;
   width: 100%;
   box-sizing: border-box;
@@ -8,7 +7,6 @@
   height: 345px;
   overflow: hidden;
   .news-feed-images {
-    border: 1px solid blue;
     width: 61%;
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +19,6 @@
     }
   }
   .news-feed-articles {
-    border: 1px solid red;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -41,4 +38,21 @@
       padding-right: 14px;
     }
   }
+}
+
+.news-feed-articles a,
+.news-feed-articles a:visited,
+.news-feed-articles a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.news-feed-article-links a,
+.news-feed-article-links a:visited,
+.news-feed-article-links a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
 }
