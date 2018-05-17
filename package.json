@@ -37,8 +37,10 @@
     "@pnp/odata": "^1.0.5",
     "@pnp/sp": "^1.0.5",
     "babel-polyfill": "^6.26.0",
+    "date-fns": "^1.29.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-transition-group": "^2.3.1",
     "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.79.1",
     "whatwg-fetch": "^2.0.4"

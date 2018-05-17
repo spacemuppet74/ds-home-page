@@ -1,0 +1,59 @@
+.news-feed-article-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  padding: 12px 0 0 14px;
+  color: white;
+  border-bottom: 1px solid white;
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+}
+
+.news-feed-current-article-appear {
+  color: white;
+  background-color: #666666;
+  opacity: 0.01;
+  &.news-feed-current-article-appear-active {
+    opacity: 1;
+    background-color: #F32333;
+    color: white;
+    transition: all 2000ms ease-out
+  }
+}
+
+.news-feed-current-article-enter-done {
+  opacity: 1;
+  background-color: #F32333;
+  color: white;
+}
+
+.news-feed-current-article-enter,
+  {
+  color: white;
+  background-color: #666666;
+  opacity: 0.01;
+  &.news-feed-current-article-enter-active {
+    opacity: 1;
+    background-color: #F32333;
+    color: white;
+    transition: all 2000ms ease-out
+  }
+}
+
+.news-feed-current-article-exit {
+  color: white;
+  background-color: #F32333;
+  opacity: 1;
+  &.news-feed-current-article-exit-active {
+    opacity: 1;
+    background-color: #666666;
+    color: white;
+    transition: all 2000ms ease-out
+  }
+}

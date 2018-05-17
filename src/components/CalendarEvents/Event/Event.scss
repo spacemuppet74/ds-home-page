@@ -1,0 +1,93 @@
+.event {
+  box-sizing: border-box;
+  width: 350px;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.event:hover {
+  cursor: pointer;
+}
+
+.event__date {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid green;
+  height: 75px;
+  width: 20%;
+  vertical-align: top;
+}
+
+.event__date__month {
+  text-align: center;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgb(30, 75, 115);
+  color: #fff;
+  padding: 4px 0;
+}
+
+.event__date__day {
+  color: rgb(30, 75, 115);
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 3rem;
+}
+
+.event__details {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 60px;
+  width: 75%;
+  vertical-align: top;
+  margin-left: 4px;
+}
+
+.event__details h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.event__details__description {
+  font-size: 0.9rem;
+}
+
+.event__details__description p,
+.event__details__description div {
+  margin: 2px 0 0 3px;
+}
+
+.event__details__description,
+.event__details__description>div {
+  display: inline;
+  overflow: hidden;
+  margin-left: 3px;
+}
+
+.show__details {
+  display: block;
+  animation-name: fadeTextIn;
+  animation-duration: 1.2s;
+}
+
+.hide__details {
+  display: none;
+}
+
+a.event-details__link,
+a.event-details__ink:hover,
+a.event-details__link:visited {
+  color: rgb(30, 75, 115);
+  text-decoration: none;
+}
+
+@keyframes fadeTextIn {
+  from {
+    color: rgba(0, 0, 0, 0)
+  }
+  to {
+    color: rgba(0, 0, 0, 1.0)
+  }
+}

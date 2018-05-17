@@ -4,18 +4,22 @@ import { fetchNewsItems } from 'services/fetch-news-items'
 import { imageSrc } from 'utils/helpers'
 
 import NewsImage from './NewsImage/NewsImage'
+import NewsTitle from './NewsTitles/NewsTitles'
 import './NewsFeed.scss'
 
 class NewsFeed extends Component {
   state = {
-    currentIndex: 1,
+    currentIndex: 0,
     isLoading: true,
     articles: []
   }
   componentDidMount() {
     console.log('news feed component mounted')
     this.fetchNews()
+    this.startTimer()
+  }
 
+  startTimer = () => {
     this.timer = setInterval(() => {
 
       if (this.state.currentIndex >= 2) {
@@ -38,8 +42,13 @@ class NewsFeed extends Component {
     })
 
     this.setState(() => ({ articles: articles.PrimarySearchResults.slice(), isLoading: false }))
+  }
 
-
+  handleMouseOver = (index) => {
+    console.log('mouse over component ', index)
+    clearInterval(this.timer)
+    this.setState(() => ({ currentIndex: index }))
+    this.startTimer()
   }
 
   render() {
@@ -52,19 +61,13 @@ class NewsFeed extends Component {
 
     return (
       <div className="news-feed-container">
-        <div className="news-feed-images">
-          <NewsImage article={articles[currentIndex]} />
-        </div>
+        <NewsImage article={articles[currentIndex]} />
         <div className="news-feed-articles">
-          <div className="news-feed-article-title">
-            <h2>{articles[0].Title}</h2>
-          </div>
-          <div className="news-feed-article-title">
-            <h2>{articles[1].Title}</h2>
-          </div>
-          <div className="news-feed-article-title">
-            <h2>{articles[2].Title}</h2>
-          </div>
+          <NewsTitle article={articles[0]} currentIndex={currentIndex} index={0} hover={this.handleMouseOver} />
+          <NewsTitle article={articles[1]} currentIndex={currentIndex} index={1}
+            hover={this.handleMouseOver} />
+          <NewsTitle article={articles[2]} currentIndex={currentIndex} index={2}
+            hover={this.handleMouseOver} />
           <div className="news-feed-article-footer">
             <span className="news-feed-article-links">Submit article | Subscribe | View all news</span>
           </div>

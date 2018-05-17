@@ -1,0 +1,37 @@
+.news-feed-images {
+  position: relative;
+  overflow: hidden;
+}
+
+.feed-image-appear {
+  opacity: 0.01;
+  transform: translateY(-100%);
+  transition: all 2000ms ease-out;
+  &.feed-image-appear-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feed-image-enter {
+  opacity: 0.01;
+  transform: translateY(-100%);
+  transition: all 2000ms ease-out;
+  &.feed-image-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feed-image-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: translateY(0);
+  &.feed-image-exit-active {
+    opacity: 0.01;
+    transform: translateY(100%);
+    transition: all 2000ms ease-out;
+  }
+}
