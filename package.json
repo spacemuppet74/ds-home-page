@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack --config ./configs/webpack.prod.js --mode production",
-    "start":
-      "webpack-dev-server --config ./configs/webpack.dev.js --mode development  --open"
+    "start": "webpack-dev-server --config ./configs/webpack.dev.js --mode development  --open"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +32,10 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "@pnp/common": "^1.0.5",
+    "@pnp/logging": "^1.0.5",
+    "@pnp/odata": "^1.0.5",
+    "@pnp/sp": "^1.0.5",
     "babel-polyfill": "^6.26.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",

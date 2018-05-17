@@ -1,17 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Header, Icon } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
 
-const App = () => {
-  return (
-    <div>
-      <Header as="h1" content="Test BoilerPlate" />
-      <Icon name="home" size="settings" />
-    </div>
-  );
-};
+import NewsFeed from 'components/NewsFeed/NewsFeed'
 
-const el = document.getElementById("root");
+const el = document.getElementById("main-news");
 
-ReactDOM.render(<App />, el);
+ReactDOM.render(<NewsFeed />, el);
