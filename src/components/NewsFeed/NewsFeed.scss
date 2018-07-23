@@ -7,7 +7,7 @@
   height: 345px;
   overflow: hidden;
   .news-feed-images {
-    width: 61%;
+    width: 55%;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 40%;
+    width: 45%;
     vertical-align: top;
     background-color: #666666;
     display: flex;
@@ -30,6 +30,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     .news-feed-article-footer {
+      position: absolute;
+      bottom: 30px;
       color: white;
       height: 20px;
       text-align: right;
